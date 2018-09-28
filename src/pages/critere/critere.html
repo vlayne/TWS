@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="dark-blue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Critère</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="critereContent">
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="primary">Skip</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHtml]="slide.title"></h2>
+      <p [innerHtml]="slide.description"></p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="../../assets/imgs/plane.jpg" class="slide-image"/>
+      <h2 class="slide-title">Ready to Discover Cities?</h2>
+      <button ion-button large clear icon-end color="primary">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
